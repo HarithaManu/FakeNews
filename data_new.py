@@ -1,13 +1,13 @@
 import multiprocessing
 import tensorflow as tf
+import pandas as pd
+import numpy as np
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
-import pandas as pd
-import numpy as np
-import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
@@ -15,7 +15,8 @@ from collections import Counter
 import csv
 import os
 import re
-import matplotlib.pyplot as plt
+import nltk
+
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
